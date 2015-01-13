@@ -1,0 +1,5 @@
+LIBRARY
+EXPORTS
+create	@1
+destroy	@2
+search	@3
