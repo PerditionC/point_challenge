@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "point_search", "point_searc
 		{35DEF6CA-D784-413B-9BC8-600B8916C30C} = {35DEF6CA-D784-413B-9BC8-600B8916C30C}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monkey", "monkey\monkey.vcxproj", "{17DC2E6A-3818-444C-877A-9E372D209D5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -51,6 +53,13 @@ Global
 		{999DA5FF-106B-437E-BCE1-4901528FCB52}.Release|Win32.Build.0 = Release|Win32
 		{999DA5FF-106B-437E-BCE1-4901528FCB52}.Release|x64.ActiveCfg = Release|x64
 		{999DA5FF-106B-437E-BCE1-4901528FCB52}.Release|x64.Build.0 = Release|x64
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Debug|Win32.Build.0 = Debug|Win32
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Debug|x64.ActiveCfg = Debug|Win32
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Release|Win32.ActiveCfg = Release|Win32
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Release|Win32.Build.0 = Release|Win32
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Release|x64.ActiveCfg = Release|x64
+		{17DC2E6A-3818-444C-877A-9E372D209D5C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
