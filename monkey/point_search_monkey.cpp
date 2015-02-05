@@ -87,6 +87,10 @@ extern "C" SearchContext* __stdcall create(const Point* points_begin, const Poin
 	sc->js_sc = call_js_create(sc->js_ctx, points_begin, points_end);
 	if (sc->js_sc == DUK_INVALID_INDEX) return cleanupSearchContext(sc, "Javascript create(points); function call failed.");
 
+	/* free any unneded memory used during create process, ie call garbage collector manually since we disabled automatic gc */
+	duk_gc(sc->js_ctx, 0);  // call twice per Duktape's recommendations
+	duk_gc(sc->js_ctx, 0);
+
 	/* return our context */
 	return sc;
 }
@@ -181,6 +185,7 @@ extern "C" int32_t __stdcall search(SearchContext* sc, const Rect rect, const in
 			//printf("[%d]=%d,x=%.3f,y=%.3f  ", i, p->rank, (double)p->x, (double)p->y);
 		}
 		//printf("\n");
+		duk_pop(sc->js_ctx);  /* pop {out_points} off stack */
 		return matches;
 	} else {
 		/* invalid value returned, so we return no results! */
